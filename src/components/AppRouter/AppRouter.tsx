@@ -1,4 +1,6 @@
+import { ApolloProvider } from "@apollo/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { client } from "../../apollo";
 import { Character } from "../../pages/Character";
 import { Home } from "../../pages/Home";
 import { NotFound } from "../../pages/NotFound";
@@ -19,7 +21,11 @@ const router = createBrowserRouter([
 ]);
 
 const AppRouter = () => {
-  return <RouterProvider router={router} />;
+  return (
+    <ApolloProvider client={client}>
+      <RouterProvider router={router} />
+    </ApolloProvider>
+  );
 };
 
 export { AppRouter };
