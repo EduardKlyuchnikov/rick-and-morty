@@ -2,6 +2,7 @@ import { useQuery } from "@apollo/client";
 import { CHARACTER_BY_ID } from "../apollo/quries";
 import { CharacterByIdVariables, CharacterResponce } from "../types";
 import { Navigate, useParams } from "react-router";
+import MainWrapper from "../components/MainWrapper/MainWrapper";
 
 const Character = () => {
   const { id } = useParams();
@@ -17,7 +18,7 @@ const Character = () => {
     },
   });
 
-  return <div>Character</div>;
+  return <MainWrapper>Character</MainWrapper>;
 };
 
 export { Character };

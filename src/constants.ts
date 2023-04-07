@@ -24,7 +24,6 @@ const types = [
   "Cromulon",
   "Mytholog",
   "Superhuman",
-  "-",
 ];
 
 export { genderers, types, specieses, statuses };
