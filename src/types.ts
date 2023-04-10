@@ -1,8 +1,10 @@
 import { OperationVariables } from "@apollo/client";
 
 export interface CharactersResponce {
-  results: Character[];
-  info: Info;
+  characters: {
+    results: Character[];
+    info: Info;
+  };
 }
 
 export interface CharacterResponce {
